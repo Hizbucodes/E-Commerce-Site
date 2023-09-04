@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-// import link
-import { Link } from 'react-router-dom';
+
 
 // import icons
 import { IoMdArrowForward } from 'react-icons/io';

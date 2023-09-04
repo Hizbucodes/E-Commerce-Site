@@ -1,6 +1,4 @@
 import React from 'react';
-import { BsArrowUpCircle, BsArrowUpRightCircle } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date();

@@ -1,4 +1,4 @@
-import Reac, {useContext} from 'react';
+import React, {useContext} from 'react';
 
 // import product context
 import { ProductContext } from '../contexts/ProductContext';

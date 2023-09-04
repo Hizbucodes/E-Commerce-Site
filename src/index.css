@@ -5,5 +5,9 @@
 @layer base {
   body {
     @apply font-primary text-primary;
+    font-family: 'Numans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand', sans-serif;
   }
 }

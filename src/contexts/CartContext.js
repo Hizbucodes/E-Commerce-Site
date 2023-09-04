@@ -20,7 +20,7 @@ const CartProvider = ({children}) => {
 
     console.log(total);
     setTotalAmount(total);
-  });
+  }, [cart]);
 
   // update item amount
   useEffect(()=>{
