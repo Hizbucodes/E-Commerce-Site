@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// importing Routes
+import {Routes, Route} from 'react-router-dom';
+
+// importing pages
+import Home from './pages/Home';
+import ProductDetails from './pages/ProductDetails';
+
+// importing components
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+// import Helmet 
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
+const App = () => {
+  return(
+    <>
+    <HelmetProvider>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ecommerce - Shop</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <meta name="description" content="AUTUMN - ECommerce" />
+     </Helmet>
+     </HelmetProvider>
+      <div className='overflow-hidden'>
+        <Header/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/product/:id' element={<ProductDetails/>}/>
+        </Routes>
+        <Sidebar/>
+        <Footer/>
+      </div>
+      </>
+   )
+};
 
 export default App;
